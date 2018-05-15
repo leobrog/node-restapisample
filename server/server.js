@@ -5,7 +5,9 @@ var bodyParser = require('body-parser');
 //Local Imports
 var {mongoose} = require('./db/mongoose');
 
-//Registering models and routes
+//Registering models and routes:
+
+// User Model and Routes
 var User = require('./models/User/user');
 var userRoutes = require('./routes/userRoutes');
 

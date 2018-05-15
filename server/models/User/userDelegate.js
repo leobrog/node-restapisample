@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
+//var mailVerifyDelegate = require('../MailVerify/mailVerifyDelegate');
+
 var User = mongoose.model('User');
-// Import email-verification model
+// Import email-verification Delegate
+
 
 exports.listAllUsers = (req, res) => {
 

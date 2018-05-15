@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 var MailVerify = mongoose.model('MailVerify');
 
-exports.sendMailVerification = (email, userId) => {
+exports._sendMailVerification = (email, userId) => {
 
     // Create random hash
     // Build link to verification endPoint 
