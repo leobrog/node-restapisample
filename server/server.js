@@ -10,6 +10,8 @@ var {mongoose} = require('./db/mongoose');
 // User Model and Routes
 var User = require('./models/User/user');
 var userRoutes = require('./routes/userRoutes');
+// Mail Verification Model and Routes
+
 
 var app = express();
 

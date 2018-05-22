@@ -41,7 +41,8 @@ exports.createUser = (req, res) => {
     newUser.save().then((user) => {
         
         // Call method to send verification mail to newly created user
-        // and save hash + userId to email-verification collection.
+        const sendMailVerification = require('../MailVerify/mailVerifyDelegate').sendMailVerification;
+        sendMailVerification(user.email, user._id);
 
         res.send({
             result: {

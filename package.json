@@ -15,7 +15,8 @@
     "express": "^4.16.3",
     "lodash": "^4.17.10",
     "mongoose": "^5.1.1",
-    "mongoose-extend-schema": "^1.0.0"
+    "mongoose-extend-schema": "^1.0.0",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"

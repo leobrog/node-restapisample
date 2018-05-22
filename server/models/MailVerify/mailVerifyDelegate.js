@@ -1,14 +1,24 @@
 const mongoose = require('mongoose');
+const uuid = require('uuid/v4');
 
-var MailVerify = mongoose.model('MailVerify');
+const MailVerify = mongoose.model('MailVerify');
 
-exports._sendMailVerification = (email, userId) => {
+exports.sendMailVerification = (email, userId) => {
 
     // Create random hash
-    // Build link to verification endPoint 
-    // Build E-mail message
-    // Send e-mail
+    const verifHash = uuid();
+    // Build link to verification endPoint
+    const verifUrl = `https://localhost:3000/api/user/verify/${verifHash}`;  
     // Save hash and userId on db
+    let verification = new MailVerify({
+        verif_hash: verifHash,
+        userId: userId
+    });
+
+    verification.save().then((verif) => {
+        // Build E-mail message
+        // Send e-mail
+    });
 }
 
 exports.verifyUserEmail = (req, res) => {
